@@ -1,0 +1,225 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+body{
+    /* 3. Add accessible line-height */
+    line-height:1.5; 
+}
+  
+  /* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+  }
+  
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-primary-Light_red: hsla(0, 100%, 67%);
+    --clr-primary-Orangey_yellow: hsla(39, 100%, 56%);
+    --clr-primary-Green_teal: hsl(166, 100%, 37%);
+    --clr-primary-Cobalt_blue: hsl(234, 85%, 45%);
+
+
+
+    --clr-primary-Light_red--transprancy: hsla(0, 100%, 67%, 0.098);
+    --clr-primary-Orangey_yellow--transprancy: hsla(39, 100%, 56%, 0.098);
+    --clr-primary-Green_teal--transprancy: hsl(166, 100%, 37%,0.098);
+    --clr-primary-Cobalt_blue--transprancy: hsl(234, 85%, 45%,0.098);
+
+    --clr-gradient-background:linear-gradient(to top,hsla(256, 72%, 46%),hsl(252, 100%, 67%));
+    --clr-gradient-circle:linear-gradient(hsla(241, 72%, 46%),hsla(241, 62%, 50%, 0.162));
+
+    --clr-neutral-Dark_gray_blue: hsl(224, 30%, 27%);
+    --clr-neutral-White: hsl(0, 0%, 100%);
+    --clr-neutral-Pale_blue: hsl(221, 100%, 96%);
+    --clr-neutral-greay:#9A959C;
+
+
+    --ff-family-default:"Hanken Grotesk", sans-serif;
+
+    --fs-400:1.125rem;
+    --fs-500:1.25rem;
+    --fs-600:1.5rem;
+    --fs-700:1.75rem;
+    --fs-800: 4rem;
+    --fs-900:5rem;
+
+
+}
+
+body{
+    font-family:var(--ff-family-default);  
+    font-size:var(--fs-400);  
+    
+ 
+}
+
+@media screen and (min-width:43.75rem){
+    body{
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .wrapper{
+        background-color:var(--clr-neutral-White);
+        
+        border-radius: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 46rem;
+        box-shadow: 0.1rem 0.1rem 1rem  black;
+        
+    }
+}
+
+.title{
+    font-weight:600;
+}
+
+.Result_box{
+    background-image: var(--clr-gradient-background);
+    border-radius: 1.5rem;
+    display: grid;
+    place-items: center;
+    color: hsl(241, 100%, 89%);
+    text-align: center;
+    padding:2.5rem 3rem;
+    gap:1.5rem;
+}
+
+.Result_box__score_box{
+    background-image: var(--clr-gradient-circle);
+    aspect-ratio :1 / 1;
+    display: inline-block;
+    /* width: 200px; */
+    width: 10rem;
+    border-radius: 50%;
+    display: grid;
+    place-items:center;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.Result_box__result_number--size {
+    display:block;
+    color: var(--clr-neutral-White);
+    font-size:var(--fs-800);
+    font-weight:700;
+}
+
+.Result_box__feedback{
+    color:var(--clr-neutral-White);
+    font-size: var(--fs-700);
+    font-weight: 600;
+}
+   
+
+.Result_box__score_box__out_of{
+    font-size:16px;
+}
+
+
+.specific_task{
+    padding:2.5rem 2rem;
+ 
+}
+
+.specific_task__title{
+    font-weight: 800;
+    color: var(--clr-neutral-Dark_gray_blue);
+}
+
+.grid_flow{
+    display: grid;
+    place-items: center;
+    padding-top: 1rem;
+    gap:1rem;
+}
+
+.specific_task__expression{
+    display: flex;
+    flex-grow: 2; 
+    
+}
+
+.specific_task__expression svg{
+    position: relative;
+    top:0.188rem;
+    margin-right: 0.313rem;
+}
+
+.expression--red{
+    color:var(--clr-primary-Light_red);
+    font-weight: 800;
+}
+
+.expression--yellow{
+    color:var(--clr-primary-Orangey_yellow);
+    font-weight: 800;
+}
+
+.expression--pale_green{
+    color:var(--clr-primary-Green_teal);
+    font-weight: 800;
+}
+
+.expression--cobalt_blue{
+    color:var(--clr-primary-Cobalt_blue);
+    font-weight: 800;
+}
+
+.flex_grow{
+    display: flex;
+    width: 100%;
+    border-radius:0.5rem;
+    padding:0.8rem 1rem;
+       
+}
+
+.flex_grow--red{
+    background-color: var(--clr-primary-Light_red--transprancy);
+}
+
+.flex_grow--yellow{
+    background-color: var(--clr-primary-Orangey_yellow--transprancy);
+}
+
+.flex_grow--green{
+    background-color: var(--clr-primary-Green_teal--transprancy);
+}
+
+.flex_grow--cobalt-blue{
+    background-color: var(--clr-primary-Cobalt_blue--transprancy);
+}
+.specific_task__mark{
+    font-weight: 800;
+}
+.specific_task__mark__actual_mark{
+    color:var(--clr-neutral-Dark_gray_blue);
+}
+
+.specific_task__mark__out_of{
+    color:var(--clr-neutral-greay);
+}
+
+.btn_continue{
+    background-color:var(--clr-neutral-Dark_gray_blue);
+    color: var(--clr-neutral-White);
+    width:100%;
+    padding:0.8rem;
+    border-radius: 150px;
+    margin-top: 2.5rem;
+}
